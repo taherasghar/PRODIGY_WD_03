@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tic Tac Toe</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+    <title>Prodigy Edition</title>
+  </head>
+
+  <body>
+    <div class="start-page">
+      <header>tic tac toe</header>
+      <p>Prodigy Edition</p>
+      <button class="start-game-button">
+        <img src="images/icons/play.svg" alt="" />
+        <p>start game</p>
+      </button>
+    </div>
+    <div class="main-page">
+      <header>tic tac toe</header>
+      <main class="hidden">
+        <div class="winner-modal">
+          <p></p>
+          <button class="restart-game-button">
+            <img src="images/icons/restart.svg" alt="" />
+            <p>restart</p>
+          </button>
+        </div>
+        <div class="player-cards">
+          <div class="player-card player1">
+            <p>player 1 (X)</p>
+            <button class="player-name" id="player1-name">Human 1</button>
+          </div>
+          <p class="versus">vs.</p>
+          <div class="player-card player2">
+            <p>player 2 (O)</p>
+            <button class="player-name" id="player2-name">Human 2</button>
+          </div>
+        </div>
+        <div class="game-board"></div>
+      </main>
+    </div>
+  </body>
+</html>

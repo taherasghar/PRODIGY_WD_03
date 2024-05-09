@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+  background-color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  color: #1e88e5;
+}
+
+.start-page header {
+  font-size: 3.8rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0;
+}
+
+.main-page header {
+  font-size: 3.8rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.start-page.hidden,
+.main-page.hidden {
+  display: none;
+}
+
+.start-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  color: #1e88e5;
+  background-color: #ffffff;
+  color: #1e88e5;
+  z-index: 2;
+}
+
+.start-page>p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.start-game-button {
+  margin: 13px 0 0 0;
+}
+
+.start-game-button,
+.restart-game-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: unset;
+  width: 200px;
+  height: 54px;
+  color: #1e88e5;
+  background-color: #1e88e5;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.start-game-button>p,
+.restart-game-button>p{
+color: white;
+}
+.start-game-button:hover,
+.restart-game-button:hover {
+  filter: brightness(1.2);
+  transform: scale(1.06, 1.06);
+}
+
+.start-game-button:active,
+.restart-game-button:active {
+  filter: brightness(0.9);
+}
+.main-page {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  height: 99vh;
+  width: 100vw;
+  align-items: center;
+  gap: 18px;
+}
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 36px;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 20px;
+}
+
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 136px);
+  grid-template-rows: repeat(3, 136px);
+  gap: 18px;
+  justify-content: center;
+  background-color: #f0f4f7;
+  border-radius: 21px;
+  padding: 18px;
+}
+
+
+.board-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 24px;
+  padding: 0;
+  background-color: #cfd8dc;
+  color: #37474f;
+  transition-duration: 0.3s;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+.board-button:enabled:hover {
+  background-color: #90a4ae;
+  transform: scale(1.06, 1.06);
+}
+
+.win-highlight {
+  background-color: #b3e5fc;
+  scale: 1.06;
+}
+
+.player-cards {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  justify-content: center;
+}
+
+.versus {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  max-width: 160px;
+  overflow: hidden;
+  gap: 8px;
+  padding: 14px 28px;
+  text-transform: capitalize;
+  background-color: #f0f4f7;
+  border-radius: 18px;
+}
+
+.player-card p {
+  margin: 0;
+}
+
+.player-card>p:first-child {
+  font-size: 0.9rem;
+}
+
+.player-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  background-color: #90caf9;
+  color: #1e88e5;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  cursor: pointer;
+  padding: 5px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.player-name:hover {
+  filter: brightness(1.1);
+}
+
+.winner-modal {
+  display: flex;
+  flex-direction: column;
+  font-weight: 1000;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 30vh;
+  border-radius: 18px;
+  width: 500px;
+  height: 300px;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: visibility 0s linear 0.25s, opacity 0.15s 0s;
+  z-index: 2;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s linear 0s, opacity 0.55s 0.55s;
+}
+
+.winner-modal>p {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.main-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+}
